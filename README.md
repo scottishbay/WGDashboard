@@ -375,8 +375,9 @@ Endpoint = 0.0.0.0:51820
 2. Update the dashboard with the following
 
    ```bash
-   ./wgd.sh update
    chmod +x ./wgd.sh
+   ./wgd.sh update
+   # A "./wgd.sh restart" may also be required
    ```
 
    > If this doesn't work, please use the method below. Sorry about that :(
@@ -393,17 +394,20 @@ Endpoint = 0.0.0.0:51820
 2. Update the dashboard
     ```shell
     git pull https://github.com/donaldzou/WGDashboard.git v3.0.6 --force
+    # if it says to do a "commit or stash" `git stash` then redo the pull
     ```
 
 3. Install
 
    ```shell
    ./wgd.sh install
+   # and/or "./wgd.sh update && ./wgd.sh restart" worked for me 
+   # "New Update Available" remains visible on WebGUI, even after update to v3.0.6  
    ```
 
 
-
 Starting with `v3.0`, you can simply do `./wgd.sh update` !! (I hope, lol)
+
 
 ## 🥘 Experimental Functions
 
